@@ -1,22 +1,20 @@
-import { useState } from 'react';
-import logo from './logo.svg';
-import './style.css';
+import { useState } from "react";
+import logo from "./logo.svg";
+import "./style.css";
 
-import { Definition } from './Definition'
-import { Answer } from './Answer'
-import { WordSelections } from './WordSelections'
-
-
+import { Definition } from "./Definition";
+import { Answer } from "./Answer";
+import { WordSelections } from "./WordSelections";
 
 function App() {
-  const [responseWord, setResponseWord] = useState()
-  const onResponse = response => {
-    setResponseWord(response)
-  }
+  const [responseWord, setResponseWord] = useState();
+  const onResponse = (response) => {
+    setResponseWord(response);
+  };
 
-  const generateWords = mainWord => {
-    return mainWord
-  }
+  const generateWords = (mainWord) => {
+    return mainWord;
+  };
 
   return (
     <div className="app">
@@ -25,7 +23,7 @@ function App() {
         <span className="title">ord Fall</span>
       </div>
 
-      <Definition generateWords={generateWords}/>
+      <Definition generateWords={generateWords} />
       <WordSelections responseWord={responseWord} />
       <Answer onResponse={onResponse} />
     </div>

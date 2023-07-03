@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,7 +9,7 @@ body {
 
 .app {
   background-color: wheat;
-  height: 100vh
+  height: 100vh;
 }
 
 .header {
@@ -18,7 +18,7 @@ body {
   display: flex;
 }
 
-.header>.title {
+.header > .title {
   vertical-align: middle;
   font-size: 1.5rem;
   margin-top: auto;
@@ -35,7 +35,7 @@ body {
 .answer {
   border: 1px solid gray;
   font-size: 2.5rem;
-  padding:10px;
+  padding: 10px;
   border-radius: 3px;
   width: 300px;
   background-color: #f3e6ce;
@@ -44,7 +44,7 @@ body {
 
 .answer:focus {
   border: 1px solid gray;
-  outline-color: #34AF72
+  outline-color: #34af72;
 }
 
 .answerContainer {
@@ -68,18 +68,18 @@ body {
   opacity: 100;
 }
 
-.word.found{
-  color: #34AF72;
+.word.found {
+  color: #34af72;
   font-size: 2.5rem;
   font-weight: 600;
 }
 
 @keyframes Fall {
   from {
-      transform: translateY(-25vh);
-}
+    transform: translateY(-25vh);
+  }
 
   to {
-      transform : translateY(70vh);
+    transform: translateY(70vh);
   }
 }
