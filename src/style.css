@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  background-color: wheat;
+  height: 100vh
+}
+
+.header {
+  padding: 10px;
+  height: 50px;
+  display: flex;
+}
+
+.header>.title {
+  vertical-align: middle;
+  font-size: 1.5rem;
+  margin-top: auto;
+  margin-left: -5px;
+}
+
+.wordDefinition {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+}
+
+.answer {
+  border: 1px solid gray;
+  font-size: 2.5rem;
+  padding:10px;
+  border-radius: 3px;
+  width: 300px;
+  background-color: #f3e6ce;
+  box-shadow: inset 0 0 3px #756547;
+}
+
+.answer:focus {
+  border: 1px solid gray;
+  outline-color: #34AF72
+}
+
+.answerContainer {
+  text-align: center;
+}
+
+.wordContainer {
+  height: 70vh;
+  border: 1px solid gray;
+  border-radius: 3px;
+  margin: 20px;
+  background-color: #f3e6ce;
+  overflow: hidden;
+  box-shadow: inset 0 0 3px #756547;
+}
+
+.word {
+  animation: Fall 5s linear infinite;
+  font-size: 2rem;
+  position: relative;
+  opacity: 100;
+}
+
+.word.found{
+  color: #34AF72;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+@keyframes Fall {
+  from {
+      transform: translateY(-25vh);
+}
+
+  to {
+      transform : translateY(70vh);
+  }
+}
