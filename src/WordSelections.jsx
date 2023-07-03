@@ -1,6 +1,10 @@
+import React from 'react';
+
 import { useRef, useState, useEffect } from "react";
+
 const max = window.innerWidth - (40 + 100);
 const min = 20;
+
 export const WordSelections = ({
   responseWord,
   words = ["asdasdf", "asdfasdfa", "asdfasdf", "asdfadff", "asdfsgf"],

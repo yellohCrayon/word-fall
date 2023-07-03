@@ -34,11 +34,10 @@ body {
 
 .answer {
   border: 1px solid gray;
-  font-size: 2.5rem;
-  padding: 10px;
+  font-size: 2.2rem;
+  padding: 10px 15px 10px;
   border-radius: 3px;
   width: 300px;
-  background-color: #f3e6ce;
   box-shadow: inset 0 0 3px #756547;
 }
 
@@ -48,7 +47,13 @@ body {
 }
 
 .answerContainer {
+  border: 1px solid gray;
   text-align: center;
+  box-shadow: inset 0 0 3px #756547;
+  padding: 15px;
+  background-color: #f3e6ce;
+
+  
 }
 
 .wordContainer {
