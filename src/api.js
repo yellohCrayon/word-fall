@@ -1,21 +1,20 @@
 import axios from "axios";
-const API_KEY = process.env.APP_API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY;
+
+const config = {
+  headers: {
+    'X-RapidAPI-Key': API_KEY,
+    'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
+  }
+};
 
 export const getRandomWord = async () => {
   try {
-    // const response = await axios.get('https://wordsapiv1.p.rapidapi.com/words/', {
-    //     params: { random: 'true' },
-    //     headers: {
-    //         'X-RapidAPI-Key': API_KEY,
-    //         'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
-    //     }
-    // })
-    return {
-      word: "test",
-      results: [
-        { definition: "mock definition, mock definition, mock definition" },
-      ],
-    };
+    const { data } = await axios.get('https://wordsapiv1.p.rapidapi.com/words/', {
+      params: { random: 'true' },
+      ...config
+    })
+    return data
   } catch (error) {
     console.error(error);
   }
@@ -23,15 +22,8 @@ export const getRandomWord = async () => {
 
 export const getWordDefinition = async (word) => {
   try {
-    // const response = await axios.get(`https://wordsapiv1.p.rapidapi.com/words/${word}`,
-    //     {
-    //         headers: {
-    //             'X-RapidAPI-Key': API_KEY,
-    //             'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
-    //         }
-    //     }
-    // );
-    return "hello";
+    const { data } = await axios.get(`https://wordsapiv1.p.rapidapi.com/words/${word}`, config);
+    return data;
   } catch (error) {
     console.error(error);
   }

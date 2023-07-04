@@ -1,30 +1,27 @@
 import React from 'react';
+import { useState, useEffect } from "react";
 
-import { useRef, useState, useEffect } from "react";
+const spacing = 20;
+const max = window.innerWidth - (spacing * 2 + 100);
+const min = spacing;
 
-const max = window.innerWidth - (40 + 100);
-const min = 20;
-
-export const WordSelections = ({
-  responseWord,
-  words = ["asdasdf", "asdfasdfa", "asdfasdf", "asdfadff", "asdfsgf"],
-}) => {
-  const prevWordsRef = useRef(null);
+export const WordSelections = ({ responseWord, words }) => {
   const [wordPositions, setWordPositions] = useState([]);
+
   useEffect(() => {
-    if (prevWordsRef !== words) {
+    if (words && words.length > 0) {
       const positions = words.map((word) => {
         return { word, position: Math.random() * (max - min) + min };
       });
-      console.log("positions", positions);
       setWordPositions(positions);
     }
-    prevWordsRef.current = words;
-  }, []);
+  }, [words]);
+
   return (
     <div className="wordContainer">
-      {wordPositions.map((word) => (
+      {wordPositions.map((word, index) => (
         <div
+          key={index}
           style={{ left: word.position }}
           className={`word ${word.word.includes(responseWord) ? "found" : ""}`}
         >
