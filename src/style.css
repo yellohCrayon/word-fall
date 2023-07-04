@@ -18,7 +18,7 @@ body {
   display: flex;
 }
 
-.header > .title {
+.header>.title {
   vertical-align: middle;
   font-size: 1.5rem;
   margin-top: auto;
@@ -29,7 +29,7 @@ body {
   text-align: center;
   font-style: italic;
   margin-bottom: 25px;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 
 .answer {
@@ -49,6 +49,12 @@ body {
 
 .answerContainer {
   text-align: center;
+<<<<<<< Updated upstream
+=======
+  box-shadow: inset 0 0 3px #756547;
+  padding: 15px;
+  background-color: #f3e6ce;
+>>>>>>> Stashed changes
 }
 
 .wordContainer {

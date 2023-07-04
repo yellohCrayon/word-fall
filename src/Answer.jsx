@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 export const Answer = ({ onResponse }) => {
   const onChange = (event) => {
     onResponse(event.target.value);
@@ -8,3 +9,12 @@ export const Answer = ({ onResponse }) => {
     </div>
   );
 };
+=======
+import React from 'react';
+
+export const Answer = ({ onResponse }) => (
+  <div className="answerContainer">
+    <input placeholder="answer..." className="answer" type="text" onChange={event => onResponse(event.target.value)} />
+  </div>
+);
+>>>>>>> Stashed changes

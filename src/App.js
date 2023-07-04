@@ -8,24 +8,18 @@ import { WordSelections } from "./WordSelections";
 
 function App() {
   const [responseWord, setResponseWord] = useState();
-  const onResponse = (response) => {
-    setResponseWord(response);
-  };
-
-  const generateWords = (mainWord) => {
-    return mainWord;
-  };
+  const [words, setWords] = useState(null);
 
   return (
     <div className="app">
       <div className="header">
-        <img src={logo} className="logo" alt="logo" />
+        <img src={logo} alt="logo" />
         <span className="title">ord Fall</span>
       </div>
 
-      <Definition generateWords={generateWords} />
-      <WordSelections responseWord={responseWord} />
-      <Answer onResponse={onResponse} />
+      <Definition onNewWords={setWords} />
+      <WordSelections words={words} responseWord={responseWord} />
+      <Answer onResponse={setResponseWord} />
     </div>
   );
 }
