@@ -7,15 +7,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* 
+light purple: #fcf6ff
+medium purple: #ded2E4
+border gray: #808080
+drop shadow gray: #575757
+main green: #34af72
+text brown: #241600
+*/
+
 .app {
-  background-color: wheat;
+  background-color: #ded2E4;
   height: 100vh;
+  color: #241600
 }
 
 .header {
   padding: 10px;
   height: 50px;
   display: flex;
+  box-shadow: 0 0 8px #575757;
+  background-color: #fcf6ff;
+  margin-bottom: 10px;
 }
 
 .header>.title {
@@ -28,40 +41,38 @@ body {
 .wordDefinition {
   text-align: center;
   font-style: italic;
-  margin-bottom: 25px;
+  margin: auto;
   font-size: 1.8rem;
 }
 
 .answer {
-  border: 1px solid gray;
+  border: 1px solid #808080;
+  border-radius: 3px;
   font-size: 2.2rem;
   padding: 10px 15px 10px;
-  border-radius: 3px;
   width: 300px;
-  box-shadow: inset 0 0 3px #756547;
+  background-color: #fcf6ff;
+  box-shadow: inset 0 0 3px #575757;
 }
 
 .answer:focus {
-  border: 1px solid gray;
+  border: 1px solid #808080;
   outline-color: #34af72;
 }
 
 .answerContainer {
-  border: 1px solid gray;
   text-align: center;
-  box-shadow: inset 0 0 3px #756547;
   padding: 15px;
-  background-color: #f3e6ce;
 }
 
 .wordContainer {
   height: 70vh;
-  border: 1px solid gray;
+  border: 1px solid 808080;
   border-radius: 3px;
   margin: 20px;
-  background-color: #f3e6ce;
+  background-color: #fcf6ff;
   overflow: hidden;
-  box-shadow: inset 0 0 3px #756547;
+  box-shadow: inset 0 0 3px #575757;
 }
 
 .word {
