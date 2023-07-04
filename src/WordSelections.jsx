@@ -1,13 +1,3 @@
-<<<<<<< Updated upstream
-import { useRef, useState, useEffect } from "react";
-const max = window.innerWidth - (40 + 100);
-const min = 20;
-export const WordSelections = ({
-  responseWord,
-  words = ["asdasdf", "asdfasdfa", "asdfasdf", "asdfadff", "asdfsgf"],
-}) => {
-  const prevWordsRef = useRef(null);
-=======
 import React from 'react';
 import { useState, useEffect } from "react";
 
@@ -16,7 +6,6 @@ const max = window.innerWidth - (spacing * 2 + 100);
 const min = spacing;
 
 export const WordSelections = ({ responseWord, words }) => {
->>>>>>> Stashed changes
   const [wordPositions, setWordPositions] = useState([]);
 
   useEffect(() => {

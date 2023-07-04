@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useState, useEffect } from "react";
 import { getRandomWord, getWordDefinition } from "./api";
 
@@ -9,12 +11,6 @@ export const Definition = ({ onNewWords }) => {
     if (!wordDefinition && !fetching) {
       fetching = true;
       (async () => {
-<<<<<<< Updated upstream
-        const response = await getRandomWord();
-        setMainWord(response?.word);
-        setWordDefinition(
-          response.results ? response.results[0]?.definition : null
-=======
         const newWords = [];
         for (let i = 0; i < 7; i++) {
           const { word } = await getRandomWord();
@@ -23,7 +19,6 @@ export const Definition = ({ onNewWords }) => {
         const response = await getWordDefinition(newWords[0]);
         setWordDefinition(
           response.results ? response.results[0].definition : 'none'
->>>>>>> Stashed changes
         );
         onNewWords(newWords)
         fetching = false
