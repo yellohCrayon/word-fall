@@ -17,9 +17,9 @@ text brown: #241600
 */
 
 .app {
-  background-color: #ded2E4;
+  background-color: #ded2e4;
   height: 100vh;
-  color: #241600
+  color: #241600;
 }
 
 .header {
@@ -31,7 +31,7 @@ text brown: #241600
   margin-bottom: 10px;
 }
 
-.header>.title {
+.header > .title {
   vertical-align: middle;
   font-size: 1.5rem;
   margin-top: auto;

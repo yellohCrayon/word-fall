@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from "react";
 import logo from "./logo.svg";
 import "./style.css";
@@ -7,7 +6,7 @@ import { Definition } from "./Definition";
 import { Answer } from "./Answer";
 import { WordSelections } from "./WordSelections";
 
-function App() {
+const App = () => {
   const [responseWord, setResponseWord] = useState();
   const [words, setWords] = useState(null);
 
@@ -23,6 +22,6 @@ function App() {
       <Answer onResponse={setResponseWord} />
     </div>
   );
-}
+};
 
 export default App;
